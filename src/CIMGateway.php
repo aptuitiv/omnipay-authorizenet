@@ -56,6 +56,11 @@ class CIMGateway extends AIMGateway
         return $this->createRequest('\Omnipay\AuthorizeNet\Message\CIMDeletePaymentProfileRequest', $parameters);
     }
 
+    public function deleteCustomer(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\AuthorizeNet\Message\CIMDeleteProfileRequest', $parameters);
+    }
+
     public function authorize(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\AuthorizeNet\Message\CIMAuthorizeRequest', $parameters);
